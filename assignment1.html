@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+         "i will change my color to your choice."
+
+    </div>
+        <label for="color">color</label>
+        <input  id="color" type="text" placeholder="enter color">
+        <button id="btn">click</button>
+
+</body>
+<script>
+
+    const divColor=document.getElementById('div1')
+    const inputColor=document.getElementById('color')
+    
+
+    const button = document.getElementById("btn")
+
+    button.addEventListener('click', function(event)
+    { 
+        const userColor = inputColor.value.trim();
+        if (userColor !== '')
+        {
+            divColor.style.color = userColor
+        }
+        
+    })
+</script>
+</html>
